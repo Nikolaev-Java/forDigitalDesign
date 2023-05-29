@@ -1,0 +1,834 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Digital Design</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href=".//css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8" />
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<div class="wrapper">
+    <header class="header lock-padding">
+      <div class="header__container _container">
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a data-goto=".bicycle" href="#" class="menu__link"><img src="/img/menu/icons/bike.png" alt="Велосипеды" class="menu__icon"><p>Велосипеды</p></a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".bicycle-parts" href="#" class="menu__link"><img src="/img/menu/icons/derailleur.png" alt="Запчасти" class="menu__icon"><p>Запчасти</p></a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".bicycle-accessories" href="#" class="menu__link"><img src="/img/menu/icons/pump.png" alt="Аксессуары" class="menu__icon"><p>Аксессуары</p></a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".bicycle-equipment" href="#" class="menu__link"><img src="/img/menu/icons/bicycleHelm.png" alt="Экипировка" class="menu__icon"><p>Экипировка</p></a>
+          </li>
+          <li class="menu__item">
+            <div class="menu__btn-change-theme">
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" class="btn-change-theme"
+                  d="M17.5 35C27.165 35 35 27.165 35 17.5C35 7.83502 27.165 0 17.5 0C7.83502 0 0 7.83502 0 17.5C0 27.165 7.83502 35 17.5 35Z"
+                  fill="#1B2227" />
+                <path class="btn-change-theme1"
+                  d="M17.5 14.5833C17.3066 14.5833 17.1211 14.6602 16.9844 14.7969C16.8477 14.9336 16.7708 15.1191 16.7708 15.3125C16.7708 15.5059 16.8477 15.6913 16.9844 15.8281C17.1211 15.9648 17.3066 16.0417 17.5 16.0417C17.8868 16.0417 18.2577 16.1953 18.5312 16.4688C18.8047 16.7423 18.9583 17.1132 18.9583 17.5C18.9583 17.8868 18.8047 18.2577 18.5312 18.5312C18.2577 18.8047 17.8868 18.9583 17.5 18.9583C17.3066 18.9583 17.1211 19.0352 16.9844 19.1719C16.8477 19.3086 16.7708 19.4941 16.7708 19.6875C16.7708 19.8809 16.8477 20.0663 16.9844 20.2031C17.1211 20.3398 17.3066 20.4167 17.5 20.4167C18.2735 20.4167 19.0154 20.1094 19.5624 19.5624C20.1094 19.0154 20.4167 18.2735 20.4167 17.5C20.4167 16.7264 20.1094 15.9846 19.5624 15.4376C19.0154 14.8906 18.2735 14.5833 17.5 14.5833ZM24.5802 16.9823L22.8667 15.3125V12.8625C22.8667 12.6691 22.7898 12.4836 22.6531 12.3469C22.5163 12.2102 22.3309 12.1333 22.1375 12.1333H19.724L18.0177 10.4198C17.9499 10.3514 17.8693 10.2972 17.7804 10.2602C17.6916 10.2232 17.5963 10.2041 17.5 10.2041C17.4037 10.2041 17.3084 10.2232 17.2196 10.2602C17.1307 10.2972 17.0501 10.3514 16.9823 10.4198L15.3125 12.1333H12.8625C12.6691 12.1333 12.4836 12.2102 12.3469 12.3469C12.2102 12.4836 12.1333 12.6691 12.1333 12.8625V15.3125L10.4198 16.9823C10.3514 17.0501 10.2972 17.1307 10.2602 17.2196C10.2232 17.3084 10.2041 17.4037 10.2041 17.5C10.2041 17.5963 10.2232 17.6916 10.2602 17.7804C10.2972 17.8693 10.3514 17.9499 10.4198 18.0177L12.1333 19.724V22.1375C12.1333 22.3309 12.2102 22.5163 12.3469 22.6531C12.4836 22.7898 12.6691 22.8667 12.8625 22.8667H15.3125L17.0187 24.5802C17.0865 24.6485 17.1672 24.7028 17.256 24.7398C17.3449 24.7768 17.4402 24.7959 17.5365 24.7959C17.6327 24.7959 17.728 24.7768 17.8169 24.7398C17.9057 24.7028 17.9864 24.6485 18.0542 24.5802L19.7604 22.8667H22.174C22.3673 22.8667 22.5528 22.7898 22.6896 22.6531C22.8263 22.5163 22.9031 22.3309 22.9031 22.1375V19.724L24.6167 18.0177C24.6827 17.9475 24.7341 17.865 24.7681 17.7748C24.802 17.6847 24.8177 17.5887 24.8143 17.4924C24.8109 17.3961 24.7885 17.3015 24.7483 17.2139C24.7081 17.1264 24.651 17.0476 24.5802 16.9823ZM21.6271 18.9073C21.5582 18.9748 21.5034 19.0554 21.4658 19.1442C21.4283 19.2331 21.4087 19.3285 21.4083 19.425V21.4083H19.425C19.3285 21.4087 19.2331 21.4283 19.1442 21.4658C19.0554 21.5034 18.9748 21.5582 18.9073 21.6271L17.5 23.0344L16.0927 21.6271C16.0252 21.5582 15.9446 21.5034 15.8558 21.4658C15.7669 21.4283 15.6715 21.4087 15.575 21.4083H13.5917V19.425C13.5913 19.3285 13.5717 19.2331 13.5342 19.1442C13.4966 19.0554 13.4418 18.9748 13.3729 18.9073L11.9656 17.5L13.3729 16.0927C13.4418 16.0252 13.4966 15.9446 13.5342 15.8558C13.5717 15.7669 13.5913 15.6715 13.5917 15.575V13.5917H15.575C15.6715 13.5913 15.7669 13.5717 15.8558 13.5342C15.9446 13.4966 16.0252 13.4418 16.0927 13.3729L17.5 11.9656L18.9073 13.3729C18.9748 13.4418 19.0554 13.4966 19.1442 13.5342C19.2331 13.5717 19.3285 13.5913 19.425 13.5917H21.4083V15.575C21.4087 15.6715 21.4283 15.7669 21.4658 15.8558C21.5034 15.9446 21.5582 16.0252 21.6271 16.0927L23.0344 17.5L21.6271 18.9073Z"
+                  fill="#F6F8FA" />
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <main class="catalog">
+      <div class="catalog__container _container">
+      <section class="catalog__items bicycle">
+        <div class="catalog__header header-block">
+          <div class="header-block__line"><span></span></div>
+          <h2 class="header-block__title">Велосипеды</h2>
+          <div class="header-block__line"><span></span></div>
+        </div>
+        <div class="catalog__content content">
+            <div class="content__goods goods">
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/1.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Polygon Xtrada 5</div>
+                    <div class="items-goods__description"></div>
+                    <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$1023.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/2.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Bianchi Nitro</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$3200.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/3.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Merida One Forty</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$2350.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/4.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Scott Gambler 910</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$9900.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/5.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">KTM Chicago 291</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$1023.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/6.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Format 1311 Plus</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$1552.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/7.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Format 1412</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$650.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/8.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Trek Marlin</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$1052.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/9.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Marin Wildcat Trail</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$1099.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/10.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Scott Aspect</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$680.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/bicycle/11.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Merida Big.Seven Limited</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$630.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="catalog__items bicycle-parts">
+        <div class="catalog__header header-block">
+          <div class="header-block__line"><span></span></div>
+          <h2 class="header-block__title">Запчасти</h2>
+          <div class="header-block__line"><span></span></div>
+        </div>
+        <div class="catalog__content content">
+            <div class="content__goods goods">
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/FOX Factory 36 Float.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">FOX Factory 36 Float</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$500.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/Formula CURA GOLD.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Formula CURA GOLD</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$196.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/Manitou Machete Comp.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Manitou Machete Comp</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$350.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/Michelin WildGrip R2 29x2.10 TR.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Michelin WildGrip R2 29x2.10 TR</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$101.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/Race Face Face Atlas 22.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Race Face Face Atlas 22</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$52.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/Schwalbe Fat Albert Rear Addix Spgrip.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Schwalbe Fat Albert Rear Addix Spgrip</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$90.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/ShimanoMT200.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Shimano MT200</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$132.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/shimani xtr.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Shimano xtr</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$75.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/shimano deore shadow.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Shimano deore shadow</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$52.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/sram x7.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Sram x7</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$60.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/parts/shimano_deore.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Shimano Deore</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$45.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="catalog__items bicycle-accessories">
+        <div class="catalog__header header-block">
+          <div class="header-block__line"><span></span></div>
+          <h2 class="header-block__title">Аксессуары</h2>
+          <div class="header-block__line"><span></span></div>
+        </div>
+        <div class="catalog__content content">
+            <div class="content__goods goods">
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Birzman Packman Handlebar Pack.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Birzman Packman Handlebar Pack</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$130.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Birzman Packman Travel Frame Pack Satellite Down-Side.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Birzman Packman Travel Frame Pack Satellite Down-Side</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$106.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/opeak TourGuide Handlebar Bag.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Topeak TourGuide Handlebar Bag</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$150.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Topeak TourGuide HandleBar Bag.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Topeak TourGuide HandleBar Bag</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$101.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Topeak PanoComp X Bluetooth Smart.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Topeak PanoComp X Bluetooth Smart</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$52.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Lezyne Connect Drive Pro 1000XL + Strip Connect Pair.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Lezyne Connect Drive Pro 1000XL + Strip Connect Pair</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$180.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Oxford Alloy Luggage Rack Disc Compatible.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Oxford Alloy Luggage Rack Disc Compatible</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$32.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/SCHWINN Deluxe Alloy Rear Rack.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">SCHWINN Deluxe Alloy Rear Rack</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$75.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/TBS HS-019 26.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">TBS HS-019 26</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$52.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Topeak BackLoader 10.0 L.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Topeak BackLoader 10.0 L</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$130.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/accessories/Topeak Frontloader 8L.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Topeak Frontloader 8L</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$145.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="catalog__items bicycle-equipment">
+        <div class="catalog__header header-block">
+          <div class="header-block__line"><span></span></div>
+          <h2 class="header-block__title">Экипировка</h2>
+          <div class="header-block__line"><span></span></div>
+        </div>
+        <div class="catalog__content content">
+            <div class="content__goods goods">
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/100 S3 Soft Tact Neon.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">100% S3 Soft Tact Neon</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$150.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/100 Speedcraft Matte Washed.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">100% Speedcraft Matte Washed</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$155.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/100 Speedcraft Soft Tact Stone.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">100% Speedcraft Soft Tact Stone</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$140.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Deuter Aviant Carry On 28 SL.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Deuter Aviant Carry On 28 SL</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$130.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Deuter UP Stockholm.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Deuter UP Stockholm</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$90.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Deuter XV 3 SL.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Deuter XV 3 SL</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$103.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Fox Livewire SS Jersey.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Fox Livewire SS Jersey</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$65.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Met Crossover.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Met Crossover</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$54.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Met Hooray.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Met Hooray</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$48.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods__body">
+                <div class="goods__items items-goods">
+                  <div class="items-goods__cart-wrapper">
+                    <div class="items-goods__img _ibg"><img src=".//img/catalog/equipment/Met Idolo.jpg" alt=""></div>
+                    <div class="items-goods__cart items-goods__cart--active">
+                      <button class="items-goods__btn btn btn--cart"><span>Купить</span></button>
+                    </div>
+                  </div>
+                  <div class="items-goods__content">
+                    <div class="items-goods__name">Met Idolo</div>
+                    <div class="items-goods__description"></div>
+                      <div class="items-goods__date">21.05.2023</div>
+                    <div class="items-goods__price">$63.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container _container">
+        <ul class="footer-menu__list">
+          <li class="footer-menu__item">
+            <a data-goto=".bicycle" href="#" class="footer-menu__link menu__link"><p>Велосипеды</p></a>
+          </li>
+          <li class="footer-menu__item">
+            <a data-goto=".bicycle-parts" href="#" class="footer-menu__link menu__link"><p>Запчасти</p></a>
+          </li>
+          <li class="footer-menu__item">
+            <a data-goto=".bicycle-accessories" href="#" class="footer-menu__link menu__link"><p>Аксессуары</p></a>
+          </li>
+          <li class="footer-menu__item">
+            <a data-goto=".bicycle-equipment" href="#" class="footer-menu__link menu__link"><p>Экипировка</p></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+	</div>
+  <div class="btn-up _hide"></div>
+  <div id="popup" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <div class="popup__title">Корзина</div>
+        <form action="#" method="post" class="form">
+          <input type="number"name="amount" class="form__amount" placeholder="Количество">
+          <div class="form__radio">
+            <p><input type="radio" name="color" value="red" class="form__color" id="red"><label for="red">Красный</label></p>
+            <p><input type="radio" name="color" value="blue" class="form__color" id="blue"><label for="blue">Синий</label></p>
+            <p><input type="radio" name="color" value="green" class="form__color" id="green"><label for="green">Зеленый</label></p>
+            <p><input type="radio" name="color" value="black" class="form__color" id="black"><label for="black">Черный</label></p>
+          </div>
+          <textarea name="comment" class="form__comment" maxlength="2000" placeholder="Комментарий"></textarea>
+          <div class="form__buttons">
+            <button class="form__btn btn-buy">Купить</button>
+            <button class="form__btn btn-close">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+	<script src=".//js/script.js"></script>
+</body>
+
+</html>
